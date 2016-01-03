@@ -4,7 +4,7 @@ definition(
 name: "Soundbar On/Off",
 namespace: "GCWF2IR",
 author: "Epotex",
-description: "Controll IR",
+description: "Control IR",
 category: "My Apps",
 iconUrl: "https://s3.amazonaws.com/smartapp-icons/Convenience/Cat-Convenience.png",
 iconX2Url: "https://s3.amazonaws.com/smartapp-icons/Convenience/Cat-Convenience@2x.png")
