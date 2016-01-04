@@ -12,7 +12,6 @@ iconX2Url: "https://s3.amazonaws.com/smartapp-icons/Convenience/Cat-Convenience@
 preferences {
     section("Choose Virtuall switch that will controll the IR") {
     	input "trigger", "capability.switch", title: "Which switch?", required: true
-        log.debug "Selected"
     }
 }
 
@@ -33,8 +32,8 @@ def initialize() {
 }
 
 def deviceNetworkId = "C0A800FA:1386"   
-def theCom = "sendir,1:1,1,38109,1,1,342,170,21,21,21,21,21,64,21,21,21,21,21,21,21,21,21,21,21,64,21,64,21,21,21,64,21,64,21,64,21,64,21,64,21,21,21,21,21,21,21,64,21,21,21,21,21,21,21,21,21,64,21,64,21,64,21,21,21,64,21,64,21,64,21,64,21,1525,342,85,21,3810"
-   
+def theCom = "sendir,1:3,1,38109,1,1,342,170,21,22,21,22,21,64,21,22,21,22,21,22,21,22,21,22,21,64,21,64,21,22,21,64,21,64,21,64,21,64,21,64,21,22,21,22,21,22,21,64,21,22,21,22,21,22,21,22,21,64,21,64,21,64,21,22,21,64,21,64,21,64,21,64,21,1525,342,85,21,3650,342,85,21,3650,342,85,21,3810"
+
 def switchOnHandler(evt) {
 	log.debug "ON"
      sendHubCommand(new physicalgraph.device.HubAction("""$theCom\r\n""",  physicalgraph.device.Protocol.LAN, deviceNetworkId))
