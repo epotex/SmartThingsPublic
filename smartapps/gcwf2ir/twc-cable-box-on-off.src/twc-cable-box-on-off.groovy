@@ -1,7 +1,7 @@
 
 
 definition(
-name: "TV On/Off",
+name: "TWC Cable Box On/Off",
 namespace: "GCWF2IR",
 author: "Epotex",
 description: "Control IR",
@@ -34,13 +34,13 @@ def initialize() {
 def switchOnHandler(evt) {
 	log.debug "ON"
     def deviceNetworkId = "C0A800FA:1386"   
-	def theCom = "sendir,1:3,1,38109,1,1,342,170,21,22,21,22,21,64,21,22,21,22,21,22,21,22,21,22,21,64,21,64,21,22,21,64,21,64,21,64,21,64,21,64,21,22,21,22,21,22,21,64,21,22,21,22,21,22,21,22,21,64,21,64,21,64,21,22,21,64,21,64,21,64,21,64,21,1525,342,85,21,3650,342,85,21,3650,342,85,21,3810"
+	def theCom = "sendir,1:3,1,38343,1,1,341,172,18,86,18,172,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,86,18,1290,341,86,18,3362,341,86,18,3834"
 	sendHubCommand(new physicalgraph.device.HubAction("""$theCom\r\n""",  physicalgraph.device.Protocol.LAN, deviceNetworkId))
 }
 
 def switchOffHandler(evt) {
 	log.debug "OFF"
     def deviceNetworkId = "C0A800FA:1386"   
-	def theCom = "sendir,1:3,1,38109,1,1,342,170,21,22,21,22,21,64,21,22,21,22,21,22,21,22,21,22,21,64,21,64,21,22,21,64,21,64,21,64,21,64,21,64,21,22,21,22,21,22,21,64,21,22,21,22,21,22,21,22,21,64,21,64,21,64,21,22,21,64,21,64,21,64,21,64,21,1525,342,85,21,3650,342,85,21,3650,342,85,21,3810"
+	def theCom = "sendir,1:3,1,38343,1,1,341,172,18,86,18,172,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,86,18,1290,341,86,18,3362,341,86,18,3834"
 	sendHubCommand(new physicalgraph.device.HubAction("""$theCom\r\n""",  physicalgraph.device.Protocol.LAN, deviceNetworkId))
 }
